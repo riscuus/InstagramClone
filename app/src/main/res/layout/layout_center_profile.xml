@@ -1,0 +1,127 @@
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginBottom="50dp">
+
+        <!-- ******************Top ToolBar*********************-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:elevation="2dp"
+            android:background="@color/white"
+            android:id="@+id/relativeLayoutToolbar">
+
+            <include layout="@layout/snippet_top_profilebar"/>
+        </RelativeLayout>
+
+        <!-- ******************Middle Section*****************-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayoutMiddleSection"
+            android:background="@color/white"
+            android:layout_below="@id/relativeLayoutToolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/MiddleLinearLayout"
+                android:weightSum="100">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="25"
+                    android:layout_marginStart="25dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/profile_photo"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="75">
+
+                    <include layout="@layout/snippet_top_profile"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_information_layout"
+                android:orientation="vertical"
+                android:layout_below="@id/MiddleLinearLayout"
+                android:paddingTop="15dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/display_name"
+                    android:text="Albert Risco"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:paddingStart="25dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/display_info"
+                    android:text="BCN - calafell"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+
+                    android:paddingStart="25dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/display_website"
+                    android:text="riscuus.github.com"
+                    android:textSize="16sp"
+                    android:textColor="@color/blue_link"
+                    android:paddingTop="10dp"
+                    android:paddingStart="25dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- ********************** Grid Photos Section ************-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayoutMiddleSection"
+            android:id="@+id/grid_section_relLayout">
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                android:id="@+id/profile_gridView"
+                android:verticalSpacing="1dp"
+                android:horizontalSpacing="1dp"
+                android:stretchMode="columnWidth"
+                android:gravity="center">
+
+            </GridView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</merge>

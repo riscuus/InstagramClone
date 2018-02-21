@@ -1,0 +1,215 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="20dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/RelLayout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="45dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_photo"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    app:civ_border_color="@color/grey"
+                    app:civ_border_width="1dp"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/changeProfilePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profile_photo"
+                    android:layout_centerHorizontal="true"
+                    android:text="Change Photo"
+                    android:textColor="@color/blue_ios"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Rel_name"
+                android:background="@drawable/grey_border_bottom"
+                android:layout_below="@id/RelLayout_1"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:id="@+id/text_name"/>
+                <EditText
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:layout_below="@id/text_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/name"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Rel_Username"
+                android:background="@drawable/grey_border_bottom"
+                android:layout_below="@id/Rel_name"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:id="@+id/text_username"/>
+                <EditText
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:layout_below="@id/text_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/username"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Rel_Website"
+                android:background="@drawable/grey_border_bottom"
+                android:layout_below="@id/Rel_Username"
+
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/text_website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Website"/>
+                <EditText
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:layout_below="@id/text_website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/website"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Rel_Bio"
+                android:background="@drawable/grey_border_bottom"
+                android:layout_below="@id/Rel_Website"
+
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/text_Bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bio"/>
+                <EditText
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:layout_below="@id/text_Bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/description"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Rel_PrivateInformation"
+                android:layout_below="@id/Rel_Bio"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Private Information"
+                    android:id="@+id/text_privateInformation"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="16dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Rel_email"
+                    android:layout_below="@id/text_privateInformation"
+                    android:background="@drawable/grey_border_bottom">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email Adress"
+                        android:paddingTop="10dp"
+                        android:id="@+id/text_emailAdress"/>
+                    <EditText
+                        android:paddingBottom="5dp"
+                        android:paddingTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:layout_below="@id/text_emailAdress"
+                        android:id="@+id/email"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Rel_email"
+                    android:background="@drawable/grey_border_bottom"
+                    android:id="@+id/Rel_phone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phone Number"
+                        android:paddingTop="10dp"
+                        android:id="@+id/text_phone"/>
+                    <EditText
+                        android:paddingTop="10dp"
+                        android:paddingBottom="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:layout_below="@id/text_phone"
+                        android:id="@+id/phoneNumber"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</merge>

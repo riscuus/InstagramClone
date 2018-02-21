@@ -1,0 +1,48 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/profileToolbar">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="riscuus"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/profileName"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="0dp"
+                    android:id="@+id/profileMenu"
+                    android:src="@drawable/ic_profile_menu"
+                    android:background="?attr/selectableItemBackground"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+</merge>
